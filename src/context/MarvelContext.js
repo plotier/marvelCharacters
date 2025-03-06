@@ -1,17 +1,18 @@
-import React, { createContext, useContext, useReducer } from 'react';
-
+import React, { createContext, useContext, useReducer } from "react";
 
 const ACTIONS = {
-  SET_CHARACTERS: 'SET_CHARACTERS',
-  TOGGLE_FAVORITE: 'TOGGLE_FAVORITE',
+  SET_CHARACTERS: "SET_CHARACTERS",
+  TOGGLE_FAVORITE: "TOGGLE_FAVORITE",
+  SET_LOADING: "SET_LOADING",
+  SET_SEARCH_VALUE:"SET_SEARCH_VALUE"
 };
-
 
 const initialState = {
   characters: [],
   favorites: [],
+  loading: false,
+   searchValue: ""
 };
-
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -22,6 +23,10 @@ const reducer = (state, action) => {
         ? state.favorites.filter((id) => id !== action.payload)
         : [...state.favorites, action.payload];
       return { ...state, favorites: newFavorites };
+    case ACTIONS.SET_LOADING:
+      return { ...state, loading: action.payload };
+    case ACTIONS.SET_SEARCH_VALUE:
+      return { ...state, searchValue: action.payload }; 
     default:
       return state;
   }
@@ -29,7 +34,6 @@ const reducer = (state, action) => {
 
 
 const StateContext = createContext();
-
 
 export const StateProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -40,6 +44,5 @@ export const StateProvider = ({ children }) => {
     </StateContext.Provider>
   );
 };
-
 
 export const useStateContext = () => useContext(StateContext);

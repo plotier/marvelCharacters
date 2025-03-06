@@ -8,7 +8,6 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { StateProvider } from './context/MarvelContext';
 import Navbar from "./componentes/Navbar";
 
-
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
