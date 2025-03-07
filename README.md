@@ -1,11 +1,6 @@
 Todo
 
-//RESULTS LENGTH
-//TODO PONER EL RESULTADO DE LOS CHARACTERS EN EL ESTADO GLOBAL
 //RESPONSIVE
-//FAVORITOS
-//RESULTS / RESULT
-//SEARCH
 //TESTS
 //README
 //ANIMACIONES CUANDO SE RENDERIZAN LAS VISTAS
@@ -16,3 +11,4 @@ Todo
 //FALTA EL TRIANGULITO DEL PROFILE
 // en Fav Button se repite el mismo interface de CharacterData y creo que en otros sitios tambiénç
     character: any; en characterCard, y en general los character
+//a veces detalle del personaje viene vacío y no muestro nda

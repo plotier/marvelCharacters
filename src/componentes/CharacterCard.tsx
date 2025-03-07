@@ -53,7 +53,7 @@ function CharacterCard({ character }: CharacterCardProps) {
 
     return (
         <div 
-            className="w-[188.571px] h-[245.971px] min-w-[172.5px] overflow-hidden bg-black flex flex-col relative group clip-bottom-right cursor-pointer"
+            className="w-[188.571px] h-[245.971px] min-w-[172.5px] overflow-hidden bg-black flex flex-col relative group clip-bottom-right "
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             onClick={() => handleCharacterClick(character.id)}
