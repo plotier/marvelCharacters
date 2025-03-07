@@ -17,12 +17,12 @@ const queryClient = new QueryClient();
 root.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
-      <StateProvider>
-        <BrowserRouter>
-          <Navbar />
+      <BrowserRouter>
+        <StateProvider>
+        <Navbar />
           <App />
-        </BrowserRouter>
-      </StateProvider>
+        </StateProvider>
+      </BrowserRouter>
     </QueryClientProvider>
   </React.StrictMode>
 );

@@ -1,22 +1,40 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Icon from './Icon';
 import { useStateContext } from "../context/MarvelContext";
-interface FavoriteIconProps {
-    id: string;
-    className: string;
+
+
+interface Character {
+    id: number;
+    name: string;
+    description: string;
+    thumbnail: {
+        path: string;
+        extension: string;
+    };
 }
-const FavButton = ({ id, className }: FavoriteIconProps) => {
+
+interface FavoriteIconProps {
+    className: string;
+    characterData: Character;
+}
+
+const FavButton = ({ characterData, className }: FavoriteIconProps) => {
     const { state, dispatch } = useStateContext();
-    const isFavorite = state.favorites.includes(id);
+
+
+    const isFavorite = state.favorites.some((fav: Character) => fav.id === characterData.id);
+
+    useEffect(() => {
+        console.log(state.favorites);
+    }, [state.favorites]);
 
     const toggleFavorite = () => {
-        dispatch({ type: "TOGGLE_FAVORITE", payload: id });
+        dispatch({ type: "TOGGLE_FAVORITE", payload: characterData });
     };
 
     return (
         <div onClick={toggleFavorite} aria-label="Toggle Favorite" className={className}>
             <Icon name={isFavorite ? "redHeart" : "whiteHeart"} className="h-8 w-8" />
-            {/* <Icon name={'whiteHeart'} className="h-[12px] w-[10px]" /> */}
         </div>
     );
 };

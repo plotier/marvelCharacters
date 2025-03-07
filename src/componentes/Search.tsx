@@ -2,12 +2,14 @@ import React, { ChangeEvent } from 'react';
 import TextInput from './TextInput';
 import { useStateContext } from "../context/MarvelContext";
 
-const Search = () => {
+interface SearchProps {
+    resultsLength: number;
+}
+
+const Search = ({ resultsLength }: SearchProps) => {
 
     const { state, dispatch } = useStateContext();
-    // const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    //     setSearchCharacter(event.target.value);
-    // };
+
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
         dispatch({ type: 'SET_SEARCH_VALUE', payload: event.target.value });
     };
@@ -21,8 +23,9 @@ const Search = () => {
                     placeholder="SEARCH A CHARACTER..."
                 />
             </div>
+
             <div className='h-full flex flex-col justify-center font-roboto-condensed text-xs font-normal leading-[14.06px] tracking-normal'>
-                XX RESULTS / RESULT
+                {!state.isLoading && resultsLength !== undefined && `${resultsLength} ${resultsLength === 1 ? 'RESULT' : 'RESULTS'}`}
             </div>
         </div>
     );

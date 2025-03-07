@@ -5,9 +5,9 @@ import { getCharacters, getCharacterById, getComicsById } from "../services/api"
 export const useCharacters = (name) => {
   return useQuery({
     queryKey: ["characters", name],
-    queryFn: () => getCharacters({ name }), // 🔹 Pasamos `name` correctamente
-    staleTime: 1000 * 60 * 60 * 24, // 24h de caché
-    enabled: name !== undefined, // 🔹 Evita ejecutar si `name` es undefined
+    queryFn: () => getCharacters({ name }), 
+    staleTime: 1000 * 60 * 60 * 24, 
+    enabled: name !== undefined
   });
 };
 
