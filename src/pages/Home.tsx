@@ -28,14 +28,19 @@ const Home: React.FC = () => {
           <Search resultsLength={data?.length} />
         </div>
         {data?.length > 0 && (
-          <ul className="flex flex-wrap justify-between w-full px-12  gap-4 ">
+          <ul className="grid grid-cols-[repeat(auto-fill,_minmax(188.571px,_1fr))] w-full gap-6 sm:px-12">
+            {/* <ul className="flex flex-wrap justify-between w-full px-12  gap-6 "> */}
             {data.map((character: any) => (
-              <CharacterCard
-                key={character.id}
-                character={character}
-              />
+              <div className="grid place-content-center">
+                <CharacterCard
+                  key={character.id}
+                  character={character}
+                />
+               </div>
+
             ))}
-          </ul>)}
+          </ul>
+        )}
       </>
     </div>
   );

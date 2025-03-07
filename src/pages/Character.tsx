@@ -32,7 +32,7 @@ const Character: React.FC = () => {
 
   return (
     <>
-      <div className="h-80  ">
+      <div className="h-full">
         {characterData &&
           <CharacterDetails
             characterData={characterData}

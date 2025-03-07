@@ -52,7 +52,7 @@ function CharacterCard({ character }: CharacterCardProps) {
     };
 
     return (
-        <div 
+        <li 
             className="w-[188.571px] h-[245.971px] min-w-[172.5px] overflow-hidden bg-black flex flex-col relative group clip-bottom-right "
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
@@ -76,7 +76,7 @@ function CharacterCard({ character }: CharacterCardProps) {
                 </div>
             </div>
             <div className="absolute bottom-0 right-0 w-0 h-0 border-r-[13px] border-r-white border-t-[13px] border-t-transparent"></div>
-        </div>
+        </li>
     );
 }
 

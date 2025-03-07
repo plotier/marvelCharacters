@@ -12,3 +12,4 @@ Todo
 // en Fav Button se repite el mismo interface de CharacterData y creo que en otros sitios tambiénç
     character: any; en characterCard, y en general los character
 //a veces detalle del personaje viene vacío y no muestro nda
+//Mirar el ejemplo de la card A-bomb, tiene pocos comics y no están centrados.
