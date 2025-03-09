@@ -11,14 +11,10 @@ const Favorites: React.FC = () => {
   );
 
   return (
-    <div className="p-5 w-full">
-      <>
-        <h1 className="text-2xl font-bold px-12 pb-2">FAVORITES</h1>
-
-
+    <>
+      <h1 className="text-2xl md:py-8  font-bold px-12">FAVORITES</h1>
+      <div className="px-5 md:px-12 w-full animate-slideDown">
         <Search resultsLength={filteredFavorites.length} />
-
-
         {filteredFavorites.length > 0 ? (
           <ul className="grid grid-cols-2 sm:flex sm:flex-wrap justify-start gap-2 xs:gap-4">
             {filteredFavorites.map((character: any) => (
@@ -28,8 +24,8 @@ const Favorites: React.FC = () => {
         ) : (
           <p className="flex flex-wrap w-full px-12 gap-4">No favorites match your search.</p>
         )}
-      </>
-    </div>
+      </div>
+    </>
   );
 };
 

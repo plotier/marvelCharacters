@@ -52,12 +52,14 @@ function CharacterCard({ character }: CharacterCardProps) {
     };
 
     return (
-        <li 
-        className="w-full max-w-[188.571px]  h-[225.971px] sm:h-[245.971px] overflow-hidden bg-black flex flex-col relative group clip-bottom-right "
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-            onClick={() => handleCharacterClick(character.id)}
-        >
+<li 
+    className="w-full max-w-[188.571px] h-[225.971px] sm:h-[245.971px] overflow-hidden bg-black flex flex-col relative group clip-bottom-right 
+               animate-fadeIn "
+    onMouseEnter={handleMouseEnter}
+    onMouseLeave={handleMouseLeave}
+    onClick={() => handleCharacterClick(character.id)}
+>
+
             <div className="flex-grow overflow-hidden border-l-pink-50 relative">
                 <img
                     src={`${character?.thumbnail.path}.${character?.thumbnail.extension}`}

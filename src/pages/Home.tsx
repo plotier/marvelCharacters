@@ -28,9 +28,7 @@ const Home: React.FC = () => {
         <Search resultsLength={data?.length} />
 
         {data?.length > 0 && (
-          <ul className="grid grid-cols-2 sm:flex sm:flex-wrap sm:justify-between gap-2 sm:gap- ">
-
-            {/* <ul className="flex flex-wrap justify-between"> */}
+          <ul className="grid grid-cols-2 sm:flex sm:flex-wrap sm:justify-between gap-2 ">
             {data.map((character: any) => (
               <div className="grid place-content-center">
                 <CharacterCard

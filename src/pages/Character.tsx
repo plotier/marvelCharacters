@@ -31,8 +31,8 @@ const Character: React.FC = () => {
   }
 
   return (
-    <>
-      <div className="h-full">
+    < div className="animate-slideDown">
+      <div className="h-full ">
         {characterData &&
           <CharacterDetails
             characterData={characterData}
@@ -45,7 +45,7 @@ const Character: React.FC = () => {
             data={comicsData}
           />}
       </div>
-    </>
+    </div>
   );
 }
 
