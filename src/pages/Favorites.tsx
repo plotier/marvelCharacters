@@ -11,16 +11,16 @@ const Favorites: React.FC = () => {
   );
 
   return (
-    <div className="p-4 w-full">
+    <div className="p-5 w-full">
       <>
         <h1 className="text-2xl font-bold px-12 pb-2">FAVORITES</h1>
 
-        <div className="p-12 pt-0 ">
-          <Search resultsLength={filteredFavorites.length} />
-        </div>
+
+        <Search resultsLength={filteredFavorites.length} />
+
 
         {filteredFavorites.length > 0 ? (
-          <ul className="flex flex-wrap justify-between w-full px-12 gap-4">
+          <ul className="grid grid-cols-2 sm:flex sm:flex-wrap justify-start gap-2 xs:gap-4">
             {filteredFavorites.map((character: any) => (
               <CharacterCard key={character.id} character={character} />
             ))}

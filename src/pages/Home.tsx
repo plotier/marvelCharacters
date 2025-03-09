@@ -22,21 +22,22 @@ const Home: React.FC = () => {
   }
 
   return (
-    <div className="p-4 w-full">
+    <div className="p-5 md:p-12 w-full ">
       <>
-        <div className="p-12 ">
-          <Search resultsLength={data?.length} />
-        </div>
+
+        <Search resultsLength={data?.length} />
+
         {data?.length > 0 && (
-          <ul className="grid grid-cols-[repeat(auto-fill,_minmax(188.571px,_1fr))] w-full gap-6 sm:px-12">
-            {/* <ul className="flex flex-wrap justify-between w-full px-12  gap-6 "> */}
+          <ul className="grid grid-cols-2 sm:flex sm:flex-wrap sm:justify-between gap-2 sm:gap- ">
+
+            {/* <ul className="flex flex-wrap justify-between"> */}
             {data.map((character: any) => (
               <div className="grid place-content-center">
                 <CharacterCard
                   key={character.id}
                   character={character}
                 />
-               </div>
+              </div>
 
             ))}
           </ul>

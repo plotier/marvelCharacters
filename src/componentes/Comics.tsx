@@ -25,7 +25,7 @@ const Comics = ({ data }: ComicsProps) => {
     };
 
     return (
-        <div className="w-[960px] overflow-hidden py-12">
+        <div className="w-[960px] overflow-hidden pt-2 pb-4 md:py-4 mx-5">
                  <h1 className="text-2xl font-bold  pb-2">COMICS</h1>
 
             <div className="flex gap-2 overflow-x-auto whitespace-nowrap custom-scrollbar">
