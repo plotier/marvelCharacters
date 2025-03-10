@@ -23,7 +23,6 @@ describe("CharacterCard Component", () => {
             </MemoryRouter>
         );
 
-
         expect(screen.getByText("Spider-Man")).toBeInTheDocument();
 
         expect(screen.getByRole("img", { name: /spider-man/i })).toHaveAttribute(

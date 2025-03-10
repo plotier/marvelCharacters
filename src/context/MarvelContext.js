@@ -8,7 +8,6 @@ const ACTIONS = {
 };
 
 const initialState = {
-  characters: [],
   favorites: JSON.parse(localStorage.getItem("favorites")) || [],
   loading: false,
   searchValue: ""
