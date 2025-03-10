@@ -4,7 +4,7 @@ import CharacterCard from "../componentes/CharacterCard";
 import { StateProvider } from "../context/MarvelContext";
 
 const mockCharacter = {
-    id: "1",
+    id: 1,
     name: "Spider-Man",
     description: "Testing with Spider-Man",
     thumbnail: {

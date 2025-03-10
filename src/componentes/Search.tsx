@@ -1,10 +1,8 @@
 import React, { ChangeEvent } from 'react';
 import TextInput from './TextInput';
 import { useStateContext } from "../context/MarvelContext";
+import { SearchProps } from "../types/types";
 
-interface SearchProps {
-    resultsLength: number;
-}
 
 const Search = ({ resultsLength }: SearchProps) => {
 

@@ -1,12 +1,8 @@
 import React from 'react';
 import Icon from './Icon';
+import { TextInputProps } from "../types/types";
 
-interface TextInputProps {
-  label?: string;
-  value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  placeholder?: string;
-}
+
 
 const TextInput: React.FC<TextInputProps> = ({ value, onChange, placeholder }) => {
   return (

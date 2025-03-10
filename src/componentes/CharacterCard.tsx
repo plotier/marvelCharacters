@@ -2,30 +2,9 @@ import React, { useState } from "react";
 import Icon from "./Icon";
 import { useStateContext } from "../context/MarvelContext";
 import { useNavigate } from "react-router-dom";
+import { Character } from "../types/types";
 
-interface CharacterCardProps {
-    character: {
-        id: string;
-        name: string;
-        description: string;
-        thumbnail: {
-            path: string;
-            extension: string;
-        };
-    };
-}
-
-interface Character {
-    id: string;
-    name: string;
-    description: string;
-    thumbnail: {
-        path: string;
-        extension: string;
-    };
-}
-
-function CharacterCard({ character }: CharacterCardProps) {
+function CharacterCard({ character }: { character: Character }) {
     const [isHovered, setIsHovered] = useState(false);
     const { state, dispatch } = useStateContext();
 
@@ -57,7 +36,7 @@ function CharacterCard({ character }: CharacterCardProps) {
                animate-fadeIn "
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            onClick={() => handleCharacterClick(character.id)}
+            onClick={() => handleCharacterClick(character.id.toString())}
         >
 
             <div className="flex-grow overflow-hidden border-l-pink-50 relative">
