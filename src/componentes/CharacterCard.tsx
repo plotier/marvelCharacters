@@ -32,20 +32,18 @@ function CharacterCard({ character }: { character: Character }) {
 
     return (
         <li
-            className="w-full max-w-[188.571px] sm:w-[188.571px]  h-[225.971px] sm:h-[245.971px] overflow-hidden bg-black flex flex-col relative group clip-bottom-right 
+            className="w-full max-w-[188.571px] sm:w-[188.571px] h-[215.971px] sm:h-[245.971px] overflow-hidden bg-black flex flex-col relative group clip-bottom-right 
                animate-fadeIn "
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             onClick={() => handleCharacterClick(character.id.toString())}
         >
-
             <div className="flex-grow overflow-hidden border-l-pink-50 relative">
                 <img
                     src={`${character?.thumbnail.path}.${character?.thumbnail.extension}`}
                     alt={character.name}
                     className="w-full h-full "
                 />
-
             </div>
             <div className="bg-marvel-red h-[5.38px] bottom-0 left-0 w-full transform origin-top transition-all duration-[300ms] ease-in-out group-hover:scale-y-[20] p-0 m-0"></div>
             <div className="h-14 pb-6 p-4 flex items-center justify-between relative ">

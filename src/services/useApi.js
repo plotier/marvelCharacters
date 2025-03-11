@@ -14,6 +14,7 @@ export const useCharacter = (id) => {
   return useQuery({
     queryKey: ["character", id],
     queryFn: () => getCharacterById(id),
+    staleTime: 1000 * 60 * 60 * 24,
     enabled: !!id,
   });
 };
@@ -21,6 +22,7 @@ export const useComics = (id) => {
   return useQuery({
     queryKey: ["getComicsById", id],
     queryFn: () => getComicsById(id),
+    staleTime: 1000 * 60 * 60 * 24,
     enabled: !!id,
   });
 };

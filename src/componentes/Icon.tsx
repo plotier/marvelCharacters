@@ -1,19 +1,12 @@
 import React from "react";
-
-type IconProps = {
-  name: string;
-  size?: number; 
-  className?: string; 
-  width?: string; 
-  height?: string;
-};
+import { IconProps } from '../types/types';
 
 function Icon({
   name,
   size = 24,
   className = "",
   width = `${size}`,
-  height = `${size}`, 
+  height = `${size}`,
 }: IconProps) {
   const iconSrc = `/icons/${name}.svg`;
 
@@ -23,7 +16,7 @@ function Icon({
       alt={name}
       width={width}
       height={height}
-      className={`inline-block ${className} `} 
+      className={`inline-block ${className} `}
     />
   );
 }

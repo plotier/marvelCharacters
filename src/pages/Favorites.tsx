@@ -10,7 +10,6 @@ const Favorites: React.FC = () => {
     character.name.toLowerCase().includes(searchValue.toLowerCase())
   );
 
-
   const isFavoritesEmpty = favorites.length === 0;
 
   const isSearchEmpty = filteredFavorites.length === 0 && !isFavoritesEmpty;

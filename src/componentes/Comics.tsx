@@ -5,10 +5,9 @@ const Comics = ({ data }: ComicsProps) => {
         const onsaleDateItem = dates?.find(item => item.type === "onsaleDate");
         return onsaleDateItem ? new Date(onsaleDateItem.date).getFullYear().toString() : 'Unknown';
     };
-
     return (
-        <div className="w-[960px] overflow-hidden pt-2 pb-4 md:py-4 mx-5">
-            <h1 className="text-2xl font-bold  pb-2">COMICS</h1>
+        <div className="w-[960px] overflow-hidden pt-2 pb-4 md:py-4 mx-5 ">
+            <h1 className="text-2xl font-bold pb-2">COMICS</h1>
 
             <div className="flex gap-2 overflow-x-auto whitespace-nowrap custom-scrollbar">
                 {data.map((comic, index) => (
@@ -20,14 +19,15 @@ const Comics = ({ data }: ComicsProps) => {
                                 className="w-full h-full "
                             />
                         </div>
-                        <div className='h-[60px] w-[179.2px]  p-2'>
-                            <p className="font-roboto-condensed text-base align-middle 
-                                          overflow-hidden text-ellipsis whitespace-normal line-clamp-2 leading-[100%] tracking-[0%]">
+                        <div className='h-[60px] w-[179.2px] p-2 mb-2'>
+                            <p className="font-roboto-condensed font-medium text-[15.05px] leading-[100%] tracking-[0%] align-middle 
+                                          overflow-hidden text-ellipsis whitespace-normal line-clamp-2 mb-2">
                                 {comic.title}
                             </p>
-                            <p className="text-black font-roboto-condensed font-normal text-[12px] leading-[100%] tracking-[0%] align-middle">
+                            <p className="font-roboto-condensed font-normal text-[11.29px] leading-[100%] tracking-[0%] align-middle ">
                                 {getYearFromOnsaleDate(comic.dates)}
                             </p>
+
                         </div>
                     </div>
                 ))}

@@ -36,8 +36,16 @@ export interface SearchProps {
 }
 
 export interface TextInputProps {
-  label?: string;
-  value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  placeholder?: string;
+    label?: string;
+    value: string;
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    placeholder?: string;
 }
+
+export interface IconProps  {
+    name: string;
+    size ?: number;
+    className ?: string;
+    width ?: string;
+    height ?: string;
+};

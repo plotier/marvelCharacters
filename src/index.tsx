@@ -17,7 +17,11 @@ const queryClient = new QueryClient();
 root.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
+      <BrowserRouter
+         future={{
+          v7_startTransition: false,
+          v7_relativeSplatPath: false,
+        }}>
         <StateProvider>
         <Navbar />
           <App />

@@ -2,7 +2,6 @@ import React from 'react'
 import Icon from './Icon'
 import { useStateContext } from "../context/MarvelContext";
 
-
 const FavCount = () => {
     const { state } = useStateContext();
     const favoritesLength = state.favorites.length

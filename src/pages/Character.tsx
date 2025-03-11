@@ -5,7 +5,6 @@ import CharacterDetails from "../componentes/CharacterDetails";
 import Comics from "../componentes/Comics";
 import { useStateContext } from "../context/MarvelContext";
 
-
 const Character: React.FC = () => {
   const { id } = useParams();
   const { dispatch } = useStateContext();

@@ -6,11 +6,9 @@ import { Character, FavoriteIconProps } from "../types/types";
 const FavButton = ({ characterData, className }: FavoriteIconProps) => {
     const { state, dispatch } = useStateContext();
     const isFavorite = state.favorites.some((fav: Character) => fav.id === characterData.id);
-
     const toggleFavorite = () => {
         dispatch({ type: "TOGGLE_FAVORITE", payload: characterData });
     };
-
     return (
         <div
             onClick={toggleFavorite}

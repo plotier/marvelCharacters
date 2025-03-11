@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API_BASE_URL = "https://gateway.marvel.com/v1/public";
-const API_KEY = "f20fa2157b6495ad86c8bcbd32fa218b";
+const API_KEY = process.env.REACT_APP_PUBLIC_MARVEL_API_KEY
 
 const marvelApi = axios.create({
   baseURL: API_BASE_URL,
