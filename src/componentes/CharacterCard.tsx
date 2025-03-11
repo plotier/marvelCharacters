@@ -48,10 +48,10 @@ function CharacterCard({ character }: { character: Character }) {
             <div className="bg-marvel-red h-[5.38px] bottom-0 left-0 w-full transform origin-top transition-all duration-[300ms] ease-in-out group-hover:scale-y-[20] p-0 m-0"></div>
             <div className="h-14 pb-6 p-4 flex items-center justify-between relative ">
                 <p className="text-white">{character.name}</p>
-                <div onClick={toggleFavorite} className="cursor-pointer">
+                <div onClick={toggleFavorite} className="cursor-pointer flex-shrink-0">
                     <Icon
                         name={isFavorite ? (isHovered ? "whiteHeartFull" : "redHeart") : "whiteHeart"}
-                        className="h-[12px] w-[10px]"
+                        className="h-[12px] w-[10.84px]"
                     />
                 </div>
             </div>
