@@ -61,3 +61,8 @@ npm start
 2. **Uso de React Query**: Permite optimizar el rendimiento evitando llamadas innecesarias y mejorando la experiencia del usuario con sincronización automática.
 3. **Estructura Modular**: Separar `pages`, `components`, `services` y `context` facilita la escalabilidad y el mantenimiento del código.
 
+## Deployment
+
+The project is deployed at [Marvel Characters](https://marvel-characters-mu.vercel.app/).
+
+
